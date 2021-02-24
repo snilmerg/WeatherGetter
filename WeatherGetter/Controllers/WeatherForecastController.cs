@@ -1,9 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Newtonsoft.Json;
+using System.IO;
 
 namespace WeatherGetter.Controllers
 {
@@ -11,29 +10,45 @@ namespace WeatherGetter.Controllers
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
     {
-        private static readonly string[] Summaries = new[]
-        {
-            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-        };
+        public static string ApiKey = "4f0845fe26db4203813194134212302";
 
         private readonly ILogger<WeatherForecastController> _logger;
+        private readonly IMemoryCache _cache;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        public WeatherForecastController(ILogger<WeatherForecastController> logger, IMemoryCache cache)
         {
             _logger = logger;
+            _cache = cache;
         }
 
         [HttpGet]
-        public IEnumerable<WeatherForecast> Get()
+        public JsonResult GetWeatherInWroclaw()
         {
-            var rng = new Random();
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
+
+            var request = (System.Net.HttpWebRequest)System.Net.WebRequest.Create(
+                "https://api.worldweatheronline.com/premium/v1/weather.ashx?key=4f0845fe26db4203813194134212302&q=Wroclaw&format=json&num_of_days=7");
+            request.Method = "GET";
+            request.ContentType = "application/json";
+            request.Accept = "application/json";
+
+            try
             {
-                Date = DateTime.Now.AddDays(index),
-                TemperatureC = rng.Next(-20, 55),
-                Summary = Summaries[rng.Next(Summaries.Length)]
-            })
-            .ToArray();
+                var httpResponse = (System.Net.HttpWebResponse)request.GetResponse();
+                using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+                {
+                    var result = streamReader.ReadToEnd();
+
+                    var deserializedResult = JsonConvert.DeserializeObject<WeatherForecast>(result);
+
+                    return new JsonResult(deserializedResult);
+                }
+            }
+            catch (System.Net.WebException e)
+            {
+                return new JsonResult(e.Message);
+            }
         }
     }
 }
+
+

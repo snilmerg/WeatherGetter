@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ouCMq9yzn02dwvZm5nSvUTTCi/+dbCUdWIsQd+gaG4d2E8vE0tQTVNk1Rpo3+zqw1mKd66hsQd1i53Y5lr1nUw==",
+  "dgSpecHash": "pq2YqUl27aAQjjqImZhHn7pdrtu9LlPvTtggrAi9IWPQDQ1yTNbTo9siTqaDyodeHcbM1WT3RvZJK0avUgKLHA==",
   "success": true,
   "projectFilePath": "C:\\Users\\mpiorek\\source\\repos\\WeatherGetter\\WeatherGetter\\WeatherGetter.csproj",
   "expectedPackageFiles": [
@@ -14,6 +14,7 @@
     "C:\\Users\\mpiorek\\.nuget\\packages\\microsoft.identitymodel.protocols.openidconnect\\6.7.1\\microsoft.identitymodel.protocols.openidconnect.6.7.1.nupkg.sha512",
     "C:\\Users\\mpiorek\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.7.1\\microsoft.identitymodel.tokens.6.7.1.nupkg.sha512",
     "C:\\Users\\mpiorek\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\mpiorek\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\mpiorek\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
     "C:\\Users\\mpiorek\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
     "C:\\Users\\mpiorek\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.6.3\\swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
