@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using Newtonsoft.Json;
 
-namespace WeatherGetter
+namespace WeatherGetter.Models
 {
     public class WeatherForecast
     {

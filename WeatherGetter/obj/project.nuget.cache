@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "pq2YqUl27aAQjjqImZhHn7pdrtu9LlPvTtggrAi9IWPQDQ1yTNbTo9siTqaDyodeHcbM1WT3RvZJK0avUgKLHA==",
+  "dgSpecHash": "Zo6tQRRMfpHPVPlNG2/VnDcOr3w9TmPHu29zFNUb0RRZpLNSI080L6dXg7RtdU1QWbEC2ds3WQEhf8yp5QTrqQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\mpiorek\\source\\repos\\WeatherGetter\\WeatherGetter\\WeatherGetter.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\mpiorek\\.nuget\\packages\\cronos\\0.7.0\\cronos.0.7.0.nupkg.sha512",
     "C:\\Users\\mpiorek\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.0\\microsoft.aspnetcore.authentication.jwtbearer.5.0.0.nupkg.sha512",
     "C:\\Users\\mpiorek\\.nuget\\packages\\microsoft.aspnetcore.authentication.openidconnect\\5.0.0\\microsoft.aspnetcore.authentication.openidconnect.5.0.0.nupkg.sha512",
     "C:\\Users\\mpiorek\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

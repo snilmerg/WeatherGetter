@@ -3,6 +3,7 @@ using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using System.IO;
+using WeatherGetter.Models;
 
 namespace WeatherGetter.Controllers
 {
@@ -10,8 +11,7 @@ namespace WeatherGetter.Controllers
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
     {
-        public static string ApiKey = "4f0845fe26db4203813194134212302";
-
+        private static readonly string ApiKey = "4f0845fe26db4203813194134212302";
         private readonly ILogger<WeatherForecastController> _logger;
         private readonly IMemoryCache _cache;
 

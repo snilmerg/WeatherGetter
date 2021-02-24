@@ -36,3 +36,4 @@ C:\Users\mpiorek\source\repos\WeatherGetter\WeatherGetter\obj\Debug\net5.0\ref\W
 C:\Users\mpiorek\source\repos\WeatherGetter\WeatherGetter\obj\Debug\net5.0\WeatherGetter.pdb
 C:\Users\mpiorek\source\repos\WeatherGetter\WeatherGetter\obj\Debug\net5.0\WeatherGetter.genruntimeconfig.cache
 C:\Users\mpiorek\source\repos\WeatherGetter\WeatherGetter\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\mpiorek\source\repos\WeatherGetter\WeatherGetter\bin\Debug\net5.0\Cronos.dll
