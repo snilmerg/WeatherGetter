@@ -16,7 +16,7 @@ namespace WeatherGetter.Controllers
         }
 
         [HttpGet]
-        public JsonResult GetWeatherInWroclaw(string city)
+        public JsonResult GetWeather(string city)
         {
             WeatherForecast result;
 
