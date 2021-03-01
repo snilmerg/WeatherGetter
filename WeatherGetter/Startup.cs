@@ -31,7 +31,7 @@ namespace WeatherGetter
             services.AddCronJob<WeatherCronService>(c =>
             {
                 c.TimeZoneInfo = TimeZoneInfo.Local;
-                c.CronExpression = @"*/1 * * * *";
+                c.CronExpression = @"0 6 * * *";
             });
         }
 

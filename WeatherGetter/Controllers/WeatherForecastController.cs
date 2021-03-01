@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Logging;
+using WeatherGetter.Models;
 
 namespace WeatherGetter.Controllers
 {
@@ -21,14 +22,14 @@ namespace WeatherGetter.Controllers
         [HttpGet]
         public JsonResult GetWeatherInWroclaw(string city)
         {
-            string result;
+            WeatherForecast result;
 
             if (_cache.TryGetValue(city, out result))
             {
                 return new JsonResult(result);
             }
 
-            return new JsonResult($"City {city} does not exist in our weather context. Try 'Wrocław', 'Warszawa', 'Poznań' or 'Łódź'.");
+            return new JsonResult($"City '{city}' does not exist in our weather context. Try 'Wrocław', 'Warszawa', 'Poznań' or 'Łódź'.");
         }
     }
 }
