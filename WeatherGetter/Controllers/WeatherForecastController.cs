@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
 using WeatherGetter.Models;
 
@@ -16,7 +17,9 @@ namespace WeatherGetter.Controllers
         }
 
         [HttpGet]
-        public JsonResult GetWeather(string city)
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(WeatherForecast))]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public IActionResult GetWeather(string city)
         {
             WeatherForecast result;
 
@@ -25,7 +28,7 @@ namespace WeatherGetter.Controllers
                 return new JsonResult(result);
             }
 
-            return new JsonResult($"City '{city}' does not exist in our weather context. Try 'Wrocław', 'Warszawa', 'Poznań' or 'Łódź'.");
+            return StatusCode(400, $"City '{city}' does not exist in our weather context. Try 'Wrocław', 'Warszawa', 'Poznań' or 'Łódź'.");
         }
     }
 }
