@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
-using Microsoft.Extensions.Logging;
 using WeatherGetter.Models;
 
 namespace WeatherGetter.Controllers
@@ -9,13 +8,10 @@ namespace WeatherGetter.Controllers
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
     {
-        
-        private readonly ILogger<WeatherForecastController> _logger;
         private readonly IMemoryCache _cache;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger, IMemoryCache cache)
+        public WeatherForecastController(IMemoryCache cache)
         {
-            _logger = logger;
             _cache = cache;
         }
 
